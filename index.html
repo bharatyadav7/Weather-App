@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>WEATHER APP</h2>
+      <div class="tab-container">
+        <p class="tab" data-yourCity>Your City</p>
+        <p class="tab" data-Search>Search Weather</p>
+      </div>
+
+      <div class="conatiner">
+        <!--Grant Location Comtainer-->
+        <div class="grant-loaction-container">
+          <img
+            src="Images/location.png"
+            width="80"
+            height="80"
+            loading="lazy"
+          />
+          <p class="para1">Grant Location Access</p>
+          <p class="para2">Allow Access to get Weather Information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!--Search Form-->
+        <form class="form-container" data-SearchForm>
+          <input
+            type="text"
+            placeholder="Search For City..."
+            data-SearchInput
+          />
+          <button class="btn" type="submit">
+            <img
+              src="Images/search.png"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+
+        <!--Loading Screen Container-->
+        <div class="loadingContainer">
+          <img src="Images/loading.gif" width="150" height="150" />
+          <p>Loading...</p>
+        </div>
+
+        <!-- Show Weather info-->
+        <div class="user-info-container">
+          <div class="name">
+            <p data-cityName></p>
+            <img data-countryIcon />
+          </div>
+
+          <p class="linePara" data-weatherDesc></p>
+          <img class="img1" data-weatherIcon />
+          <p data-weatherTemp></p>
+
+          <!--3 Cards Parameter-->
+
+          <div class="parameter-contaiiner">
+            <!--Card 1-->
+            <div class="parameter">
+              <img src="Images/wind.png" alt="" />
+              <p>WindSpeed</p>
+              <p data-windspeed></p>
+            </div>
+
+            <!--Card 2-->
+            <div class="parameter">
+              <img src="Images/humidity.png" alt="" />
+              <p>Humidity</p>
+              <p data-humidity></p>
+            </div>
+
+            <!--Card 3-->
+            <div class="parameter">
+              <img src="Images/cloud.png" alt="" />
+              <p>Cloud</p>
+              <p data-cloud></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
